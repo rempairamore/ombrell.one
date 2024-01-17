@@ -1,0 +1,20 @@
+.veryBig {
+    font-size: 5em;
+    margin-bottom: 0!important;
+}
+
+.middleSize {
+    font-size: 3em;
+    margin-top: 0!important;
+}
+
+.immagineDettaglio {
+    max-width: 100%;
+}
+
+.titoloCity {
+    font-size: 7em;
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+}

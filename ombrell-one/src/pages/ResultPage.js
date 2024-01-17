@@ -56,6 +56,7 @@ export default function ResultPage() {
     "cod": 200
   });
   const [iconUrl, setIconUrl] = useState({});
+  const [tempColor, setTempColor] = useState(50);
 
 
   useEffect(() => {
@@ -64,21 +65,29 @@ export default function ResultPage() {
         setDatiMeteo(response.data)
         setIconUrl('http://openweathermap.org/img/wn/'+response.data.weather[0].icon+'@2x.png')
         console.log(response.data);
+            if (+response.data.main.temp < 12) {
+                setTempColor('veryBig p-0 blueTemperature')
+              } else if (+response.data.main.temp >= 12 && +response.data.main.temp<= 22) {
+                setTempColor('veryBig p-0 yellowTemperature')
+              } else {
+                setTempColor('veryBig p-0 redTemperature')
+              }
+            
       })
       .catch(function (error) {
         console.log(error);
       })
     
-  }, [lat, lon])
+  }, [lat, lon])  
   
-  
+
     return (
         <Container>
             <h1 className='text-center titoloCity'>{datiMeteo.name}</h1>
             <div className='d-flex justify-content-around'>
   <Row>
     <Col className='d-flex flex-column align-items-center justify-content-center m-0'>
-      <span className='veryBig p-0'>{datiMeteo.main && datiMeteo.main.temp.toFixed(1)}&deg;</span>
+      <span className={tempColor}>{datiMeteo.main && datiMeteo.main.temp.toFixed(1)}&deg;</span>
       <span className='middleSize p-0'>{datiMeteo.main && datiMeteo.main.humidity}%</span>
     </Col>
   </Row>

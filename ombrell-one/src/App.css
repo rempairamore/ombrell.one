@@ -18,3 +18,31 @@
     font-optical-sizing: auto;
     font-weight: 700;
 }
+
+.bottoneChiudi {
+    font-size: 2em;
+    position: fixed;
+    top: 0;
+}
+
+.blueTemperature {
+    color: blue;
+  }
+  
+  .yellowTemperature {
+    color: rgb(234,182,118);
+  }
+  
+  .redTemperature {
+    color: #e23e52;
+  }
+
+  .lostWords {
+    background: rgb(137,191,0);
+    background: radial-gradient(circle, rgba(137,191,0,0.9401961468181023) 0%, rgba(217,179,68,1) 100%); 
+    font-size: 5em;
+    padding: 1.5em;
+    border-radius: 3em;
+    text-align: center;
+    color: rgb(33, 50, 36)
+  }

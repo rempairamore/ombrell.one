@@ -1,3 +1,12 @@
+body {
+  background-color: #F5F1ED!important;
+}
+
+.bg-body-tertiary.justify-content-between.navbar.navbar-expand.navbar-light{
+  background-color: #e4efd0!important;
+  border-radius: 1em;
+}
+
 .veryBig {
     font-size: 5em;
     margin-bottom: 0!important;
@@ -46,3 +55,51 @@
     text-align: center;
     color: rgb(33, 50, 36)
   }
+
+  .singleElementList {
+    cursor: pointer;
+  }
+
+  .singleElementList:hover {
+    background-color: rgba(173, 216, 230, 0.8); 
+  }
+
+  /* Tablet */
+@media (max-width: 768px) {
+  .veryBig {
+      font-size: 4em;
+  }
+
+  .middleSize {
+      font-size: 2.5em;
+  }
+
+  .titoloCity {
+      font-size: 5em;
+  }
+
+  .bottoneChiudi {
+      font-size: 1.5em;
+  }
+
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .veryBig {
+      font-size: 2.5em;
+  }
+
+  .middleSize {
+      font-size: 1.8em;
+  }
+
+  .titoloCity {
+      font-size: 3.5em; 
+  }
+
+  .bottoneChiudi {
+      font-size: 1.2em;
+  }
+
+}

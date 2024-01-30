@@ -9,7 +9,7 @@ export default function CreazioneListaSearchComp( { cities } ) {
     return (
     <ListGroup>
         {cities.map((e, index)=>
-        <ListGroup.Item key={index} onClick={() => navigate('/result/' + e.coord.lon + '/' + e.coord.lat)}>{e.name}</ListGroup.Item>
+        <ListGroup.Item key={index} className='singleElementList' onClick={() => navigate('/result/' + e.coord.lon + '/' + e.coord.lat)}>{e.name}</ListGroup.Item>
         )}
     </ListGroup>
   )
